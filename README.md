@@ -4,8 +4,9 @@ Ensemble de fichiers de configuration et Bash pour personnaliser le shell et que
 
 ---
 # Fonts shell  
-1. Intall [MesloLGSNF](https://github.com/fontmgr/MesloLGSNF)
-
+1. Intall [MesloLGSNF](https://github.com/fontmgr/MesloLGSNF) .fonts
+2. Intall [starship](https://starship.rs/) colors for prompt shell
+3. Intall [synth-shell](https://github.com/andresgongora/synth-shell) replace starship
 
 ---
 # Spotify

@@ -3,6 +3,11 @@ Ensemble de fichiers de configuration et Bash pour personnaliser le shell et que
 
 
 ---
+# Fonts shell  
+1. Intall [MesloLGSNF](https://github.com/fontmgr/MesloLGSNF)
+```
+
+---
 # Spotify
 1. Intall [Spicetify Themes](https://github.com/spicetify/spicetify-themes)
 2. Set Current theme to Sleek

@@ -36,7 +36,7 @@ sudo vim /etc/default/grub
 Change `#GRUB_THEME=` to
 `GRUB_THEME="/usr/share/grub/themes/tartarus/theme.txt"`
 ```bash
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 If all works correctly you should get this line in the out put:
 ```bash

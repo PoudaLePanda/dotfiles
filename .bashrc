@@ -610,3 +610,4 @@ else
 	echo "can't found the autojump script"
 fi
 
+export PATH=$PATH:/home/poudalepanda/.spicetify

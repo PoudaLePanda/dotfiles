@@ -3,9 +3,9 @@ Ensemble de fichiers de configuration et Bash pour personnaliser le shell et que
 Tous ces fichiers sont réunis dans un seul endroit, et prêts à l'emploi.
 [inspiration](https://github.com/lime-desu/dootsfile)
 
-## desktop Gnome :
-1. Extensions : Blur My Shell, Just Perfection, Freon, Clipboard indicator, User Theme, Aylur's Widgets
-2. AppIndicator and KStatusNotifierItem Support; ArcMenu; Bluetooth Quick Connect, Blur My Shell, Caffeine, Dash to Dock, Date Menu Formatter, Dynamic Panel Transparency, GSConnect, Media Controls, Privacy Quick Settings Menu, Rounded Corners, Workspace Indicator
+## Desktop Gnome :
+1. Extensions : Blur My Shell, Just Perfection, Freon, Clipboard indicator, User Theme, Aylur's Widgets, AppIndicator and KStatusNotifierItem Support; ArcMenu; Bluetooth Quick Connect, Blur My Shell, Caffeine, Dash to Dock, Date Menu Formatter, Dynamic Panel Transparency, GSConnect, Media Controls, Privacy Quick Settings Menu, Rounded Corners, Workspace Indicator, Plank
+2. [MochaTheme](https://github.com/lime-desu/MochaTheme)
 
 
 ---
@@ -26,3 +26,20 @@ spicetify config current_theme Sleek
   spicetify config color_scheme nord
 ```
 ---
+
+## Polybar 
+1. Intall [polybar](https://github.com/polybar/polybar/wiki)
+```bash
+sudo dnf install polybar
+``` 
+2. Intall [starship](https://starship.rs/) colors for prompt shell
+3. Intall [synth-shell](https://github.com/andresgongora/synth-shell) replace starship
+---
+
+## Ulauncher  
+1. Intall [ulauncher](https://ulauncher.io/#Download)
+```bash
+sudo dnf install ulauncher
+``` 
+2. Intall [starship](https://starship.rs/) colors for prompt shell
+3. Intall [synth-shell](https://github.com/andresgongora/synth-shell) replace starship

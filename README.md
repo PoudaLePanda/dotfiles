@@ -26,6 +26,7 @@ Other programs: Vs code , htop, cava.
 
 ---
 ## [Tartarus Grub](https://github.com/AllJavi/tartarus-grub)
+[TODO](https://github.com/shvchk/fallout-grub-theme)
 1. Intall
 ```bash
 git clone https://github.com/AllJavi/tartarus-grub.git

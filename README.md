@@ -3,6 +3,7 @@ Ensemble de fichiers de configuration et Bash pour personnaliser le shell et que
 Tous ces fichiers sont réunis dans un seul endroit, et prêts à l'emploi.
 Other programs: Vs code , htop, cava.
 [inspiration](https://github.com/lime-desu/dootsfile)
+[neofetch](https://itsfoss.com/using-neofetch/)
 
 ## Desktop Gnome :
 1. Extensions : Blur My Shell, Just Perfection, Freon, Clipboard indicator, User Theme, Aylur's Widgets, AppIndicator and KStatusNotifierItem Support; ArcMenu; Bluetooth Quick Connect, Blur My Shell, Caffeine, Dash to Dock, Date Menu Formatter, Dynamic Panel Transparency, GSConnect, Media Controls, Privacy Quick Settings Menu, Rounded Corners, Workspace Indicator, Plank

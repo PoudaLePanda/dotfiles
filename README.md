@@ -5,7 +5,7 @@ Ensemble de fichiers de configuration et Bash pour personnaliser le shell et que
 ---
 # Fonts shell  
 1. Intall [MesloLGSNF](https://github.com/fontmgr/MesloLGSNF)
-```
+
 
 ---
 # Spotify
@@ -13,4 +13,9 @@ Ensemble de fichiers de configuration et Bash pour personnaliser le shell et que
 2. Set Current theme to Sleek
 ```bash
 spicetify config current_theme Sleek
+``` 
+3. Set color scheme to nord
+```bash
+  spicetify config color_scheme nord
 ```
+---

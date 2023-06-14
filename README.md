@@ -24,15 +24,14 @@ Avant de commencer on s'[ambiance](https://www.youtube.com/watch?v=9Broidxg7w0) 
 6. Speed up DNF:
 	- echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
 	- echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
-1.5. Activer rpm fusion
+7 Activer rpm fusion
 	- [rpm fusion](https://rpmfusion.org/Configuration)
-	- sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 	- sudo dnf upgrade --refresh
 7. Install DNFDragora:
-	- sudo dnf isntall dnfdragora
+	- sudo dnf install dnfdragora
 4. Install Preload
 	- sudo dnf copr enable elxreno/preload -y && sudo dnf install preload -y
-2.5 Installing essential packages
+2 Installing essential packages
 	- sudo dnf install timeshift mpv gnome-tweaks git vlc unrar unzip python3-pip cargo p7zip p7zip-plugins ntfs-3g steam htop kdeconnectd chrome-gnome-shell gnome-extensions-app bleachbit
 11. Better Fonts:
 	- sudo dnf copr enable dawid/better_fonts -y

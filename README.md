@@ -1,7 +1,40 @@
 # dotfiles
-Ensemble de fichiers de configuration pour desktop Gruvbox Themes/icons/cursors/ULauncher/Grub.
+Ensemble de fichiers de configuration pour desktop Gnome sur fedora 38.
 Tous ces fichiers sont réunis dans un seul endroit, et prêts à l'emploi.
-Other programs: Vs code , htop, cava.
+
+## Post-install fedora 38
+1. Update & Upgrade (En Preums):
+	- sudo dnf upgrade --refresh
+2. Activer rpm fusion
+	- [rpm fusion](https://rpmfusion.org/Configuration)
+	- sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+2. Gnome-tweak
+	- sudo dnf install gnome-tweak-tool
+3. Install Timeshift backup:
+	- sudo dnf install timeshift
+4. Install Preload
+	- sudo dnf copr enable elxreno/preload -y && sudo dnf install preload -y
+5. Firefox Tweaks:
+	- about:config
+	- layers.acceleration.force-enabled
+	- gfx.webrender.all
+6. Speed up DNF:
+	- echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
+	- echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
+7. Install DNFDragora:
+	- sudo dnf isntall dnfdragora
+8. Install GNOME Extensions:
+	- dnf install chrome-gnome-shell gnome-extensions-app
+9. Install KDEConnect:
+	- sudo dnf install kdeconnectd
+10. Install Steam:
+	- sudo dnf install steam
+11. Better Fonts:
+	- sudo dnf copr enable dawid/better_fonts -y
+	- sudo dnf install fontconfig-font-replacements -y
+	- sudo dnf install fontconfig-enhanced-defaults -y
+12. Install Bleachbit:
+	- sudo dnf install bleachbit
 
 [inspiration](https://github.com/lime-desu/dootsfile)
 [neofetch](https://itsfoss.com/using-neofetch/)

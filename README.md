@@ -2,6 +2,7 @@
 Ensemble de fichiers de configuration pour desktop Gnome sur fedora 38.
 Tous ces fichiers sont réunis dans un seul endroit, et prêts à l'emploi.
 
+Avant de commencer on s'[ambiance](https://www.youtube.com/watch?v=9Broidxg7w0) !
 - **OS**: [Fedora Linux](https://getfedora.org/)
 - **Shell**: bash
   - **Prompt**: [Starship](https://starship.rs/)

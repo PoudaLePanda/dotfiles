@@ -4,12 +4,16 @@ Tous ces fichiers sont réunis dans un seul endroit, et prêts à l'emploi.
 
 ## Post-install fedora 38
 1. Update & Upgrade (En Preums):
+	- sudo dnf update -y && sudo dnf upgrade -y
+	- sudo fwupdmgr refresh --force
+	- sudo fwupdmgr update
 	- sudo dnf upgrade --refresh
-2. Activer rpm fusion
+1.5. Activer rpm fusion
 	- [rpm fusion](https://rpmfusion.org/Configuration)
 	- sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-2. Gnome-tweak
-	- sudo dnf install gnome-tweak-tool
+	- sudo dnf upgrade --refresh
+2.5 Installing essential packages
+	- sudo dnf install mpv gnome-tweaks git vlc unrar unzip python3-pip cargo p7zip p7zip-plugins ntfs-3g steam htop kdeconnectd
 3. Install Timeshift backup:
 	- sudo dnf install timeshift
 4. Install Preload
@@ -25,126 +29,31 @@ Tous ces fichiers sont réunis dans un seul endroit, et prêts à l'emploi.
 	- sudo dnf isntall dnfdragora
 8. Install GNOME Extensions:
 	- dnf install chrome-gnome-shell gnome-extensions-app
-9. Install KDEConnect:
-	- sudo dnf install kdeconnectd
-10. Install Steam:
-	- sudo dnf install steam
 11. Better Fonts:
 	- sudo dnf copr enable dawid/better_fonts -y
 	- sudo dnf install fontconfig-font-replacements -y
 	- sudo dnf install fontconfig-enhanced-defaults -y
 12. Install Bleachbit:
 	- sudo dnf install bleachbit
+13. gnome extension manager & dynamic wallpaper using the flatpak. 
+	- flatpak install flathub com.mattjakeman.ExtensionManager
+	- flatpak install flathub me.dusansimic.DynamicWallpaper
+14. [Setup MacOS theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+	- git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+	- ./install.sh -m -t all -l -N stable --normal --round
+	- sudo ./tweaks.sh -g
+	- sudo ./tweaks.sh -f (pour firefox)
+15. Open the Dynamic Wallpaper application and import both the Light and Dark wallpapers.
 
 [inspiration](https://github.com/lime-desu/dootsfile)
 [neofetch](https://itsfoss.com/using-neofetch/)
 
 ## Desktop Gnome :
-**Extensions : Blur My Shell, Just Perfection, Freon, Clipboard indicator, User Theme, Aylur's Widgets, AppIndicator and KStatusNotifierItem Support; ArcMenu; Bluetooth Quick Connect, Blur My Shell, Caffeine, Dash to Dock, Date Menu Formatter, Dynamic Panel Transparency, GSConnect, Media Controls, Privacy Quick Settings Menu, Rounded Corners, Workspace Indicator, Plank
-
-
----
-## (GTK-Theme)[https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme]
-1. Intall `sudo dnf install gtk-murrine-engine`
-2. Move the extracted files to the following paths:
-	3. For GTK3: `~/.themes` In this path you must move the entire theme folder.
-	4. For GTK4: `~/.config/gtk-4.0` The files to move to this path can be found inside the theme directory in the gtk-4.0 folder, copy only the `assets`, `gtk.css` and `gtk-dark.css` files or create a symlinks.
-5. Applying GTK Themes to Flatpak Apps
-	6. Override flatpak themes to `~/.themes`: `sudo flatpak override --filesystem=$HOME/.themes`
-	7. Override flatpak icons to `~/.icons`: `sudo flatpak override --filesystem=$HOME/.icons`
-	8. Override flatpak themes to `~/.config/gtk-4.0` locally: `flatpak override --user --filesystem=xdg-config/gtk-4.0`
-	9. Override flatpak themes to `~/.config/gtk-4.0` globally: `sudo flatpak override --filesystem=xdg-config/gtk-4.0`
-10. For icons and cursors move `icons` to `~/.icons`
-10. For fonts move `fonts` to `~/.fonts`
-
----
-## [Tartarus Grub](https://github.com/AllJavi/tartarus-grub)
-[TODO](https://github.com/shvchk/fallout-grub-theme)
-1. Intall
-```bash
-git clone https://github.com/AllJavi/tartarus-grub.git
-cd tartarus-grub
-sudo cp tartarus -r /usr/share/grub/themes/
-sudo vim /etc/default/grub
-```
-Change `#GRUB_THEME=` to
-`GRUB_THEME="/usr/share/grub/themes/tartarus/theme.txt"`
-```bash
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-```
-If all works correctly you should get this line in the out put:
-```bash
-Found theme: /usr/share/grub/themes/tartarus/theme.txt
-```
-When editing the file `/etc/default/grub`, you also have to comment the line `'GRUB_TERMINAL_OUTPUT="console"`
-
----
-## [ulauncher](https://ulauncher.io/#Download)  
-1. Intall 
-```bash
-sudo dnf install ulauncher
-``` 
-2. To apply the Ulauncher themes, go to `~/.config/ulauncher`, and create the folder `/user-themes`.
-	- Move the files to the `~/.config/ulauncher/user-themes`.
-	- Now press `Ctrl+Spacebar` and click on the cog in the Ulauncher bar or click in Ulauncher systray icon and go to app config and choose the new themes.
-
-## [Conky](https://github.com/brndnmtthws/conky)
-1. install
-```bash
-sudo dnf install conky
-``` 
-2. Pour lancer conky au démarrage sous Gnome, il faut créer un fichier conky.desktop dans `~/.config/autostart` avec le contenu :
-```bash
-[Desktop Entry]
-Name=Conky
-Comment=Moniteur système
-Exec=conky &
-Terminal=false
-Type=Application
-Icon=gnome-monitor
-Categories=System;
-StartupNotify=false
-``` 
-3. start conky $`conky`
-4. Par défaut, Conky ira chercher le fichier de configuration ~/.config/conky/conky.conf. S'il n'existe pas, Conky se repliera sur /etc/conky/conky.conf. Pour lancer un fichier de configuration de conky particulier, la commande à exécuter est :
-```bash
-conky -c /home/user/.config/conky/conky_alt.conf
-```
-5. pour lancer plusieurs Conky avec différentes configuration en même temps, vous devez réaliser un script bash. Pour cela, il faut créer un fichier en ".sh". Dans cet exemple, il sera nommé conky.sh.
-```bash
-#!/bin/sh
-conky -c ~/.scripts/.conkyrc
-conky -c ~/.scripts/.conkyrc2
-conky -c ~/.scripts/.conkyrc3
-conky -c ~/.scripts/.conkyrc4
-```
-6. Ensuite, ce fichier conky.sh doit être rendu exécutable. Pour cela, il suffit de faire
-```bash
-chmod +x conky.sh
-```
-
-##[cava](https://github.com/karlstav/cava)
-1. install dependencies
-```bash
-sudo dnf install alsa-lib-devel ncurses-devel fftw3-devel pulseaudio-libs-devel libtool autoconf-archive
-```
-2. install
-```bash
-sudo dnf install cava
-```
+**Extensions : Blur My Shell, Just Perfection, Freon, User Theme, Aylur's Widgets, AppIndicator and KStatusNotifierItem Support; ArcMenu; Bluetooth Quick Connect, Blur My Shell, Caffeine, Dash to Dock, Date Menu Formatter, Dynamic Panel Transparency, GSConnect, Media Controls, Privacy Quick Settings Menu, Rounded Corners,Quick Settings Tweaker , Workspace Indicator, Plank, dash to dock animator, Compiz Magic Lamp Effect, Gnome 4X UI Improvements
 
 ---
 ##  shell  
-2. Intall [starship](https://starship.rs/) colors for prompt shell
-3. Intall [synth-shell](https://github.com/andresgongora/synth-shell) replace starship
+1. Intall [starship](https://starship.rs/) colors for prompt shell
+2. Intall [synth-shell](https://github.com/andresgongora/synth-shell) replace starship
 
-
----
-## Polybar 
-1. Intall [polybar](https://github.com/polybar/polybar/wiki)
-```bash
-sudo dnf install polybar
-``` 
-2. Intall [starship](https://starship.rs/) colors for prompt shell.
-3. Intall [synth-shell](https://github.com/andresgongora/synth-shell) replace starship
 

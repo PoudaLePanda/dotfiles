@@ -43,6 +43,9 @@ Avant de commencer on s'[ambiance](https://www.youtube.com/watch?v=9Broidxg7w0) 
 14. [Setup MacOS theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 	- git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 	- ./install.sh -m -t all -l -N stable --normal --round
+  - ou alor ; ./tweaks.sh -i fedora -F -d // sudo flatpak override --filesystem=xdg-config/gtk-4.0 ./install.sh -l -HD --right -c Dark -c Light -i fedora -N glassy
+
+
 	- sudo ./tweaks.sh -g
 
 [inspiration](https://github.com/lime-desu/dootsfile)
